@@ -10,12 +10,16 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 .vix{ float: right; }
 .vih{ display: none !important; }
 .vig{ width: 100% !important; }
-.vdw { outline: 1px solid #333 !important; }
+.vdw { outline: 1px solid #bbb !important; }
+.vdw.vog{ outline: none !important; }
+.vdw.vog *{ outline: none !important; }
+
 .mail-list-form { display: none !important; }
 .vaz{ display: none !important; }
 .ui-sortable div, .vjd > li { cursor: move; }
 .subnav { cursor: pointer; }
-.vje { background-color: #eee; outline: 1px dashed #ccc; display: inline-block; float: left !important; border-radius: 10px; opacity: 0.7 }
+.vje { background-color: #eee; outline: 1px dashed #ccc; display: inline-block; float: left !important; border-radius: 10px; opacity: 0.7, width: 100%; }
+.ui-sortable, .vnz{ transition: none !important; -moz-transition: none !important; -webkit-transition: none !important;}
 body [contenteditable] { cursor: text; }
 .vba{ opacity: 0 !important; }
 /*   Allows hovering on email-forms to edit the success and failure messages.   */
@@ -28,6 +32,7 @@ body [contenteditable] { cursor: text; }
     -ms-user-select: none;
     user-select: none;
 }
+.viu .btn { -webkit-user-select: text !important; }
 
 /************* Icon Styles *************/
 
@@ -55,6 +60,7 @@ body [contenteditable] { cursor: text; }
 
 .vjc{ opacity: 1; width: 48px; height: 100%; position: fixed; left: 0px; color: #666666; font-size: 15px; z-index: 200; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); opacity: 1; }
 .vjc ul{ margin: 0px; padding: 0px; list-style: none; overflow: hidden; }
+.vjc p, .vjc span{ letter-spacing: 0; }
 
 @media all and (max-height: 800px){
 	.vjc{ font-size: 13px; }
@@ -62,7 +68,8 @@ body [contenteditable] { cursor: text; }
 
 .viu{ padding-left: 48px; overflow-x: hidden; width: 100%; height: 100%; position: absolute; right: 0px; background: #eee; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; overflow-y: scroll}
 
-.vjc, .vin, .vjq, .vhe, .vjr{ font-family: 'Roboto',"Helvetica Neue", "Helvetica", Helvetica, "Arimo", Arial, sans-serif !important; }
+.vjc, .vin, .vjq, .vhe, .vjr, .vnk span, .vnk p{ font-family: 'Roboto',"Helvetica Neue", "Helvetica", Helvetica, "Arimo", Arial, sans-serif !important; }
+.vjc p, .vjc span, .vin span, .vin p{ font-family: 'Roboto',"Helvetica Neue", "Helvetica", Helvetica, "Arimo", Arial, sans-serif !important; }
 
 /************* Button Styles *************/
 
@@ -70,7 +77,7 @@ body [contenteditable] { cursor: text; }
 
 .vhm{ text-align: center; width: 320px; position: relative; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); margin: 0 auto; }
 .vhe{ display: inline-block; width: 100%; height: 180px; padding: 12px; font-size: 20px; font-weight: normal; color: #aaa; border: 1px dashed #aaa; margin-bottom: 32px; cursor: pointer; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; }
-.vhe span{ display: block; position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+.vhe span{ display: block; position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);   max-width: 100%; text-overflow: ellipsis; overflow: hidden; }
 .vhe:last-child{ margin-bottom: 0px; }
 .vhe:hover{ background: rgba(255,255,255,0.4); }
 
@@ -129,7 +136,7 @@ body [contenteditable] { cursor: text; }
 .vgu:hover{ opacity: 1; background: #383E47; }
 .vgu .variant-pen{ float: right; cursor: pointer; position: relative; top: 2px; }
 .vfp{ cursor: pointer; cursor: pointer; transform: rotate(0deg);  }
-.vei{ font-weight: 500; }
+.vei{ font-weight: 500; -webkit-user-select: text !important; -khtml-user-select: text !important;  -moz-user-select: text !important; }
 
 .vho{ padding: 0 32px; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; overflow: hidden; }
 .vho span{ position: relative; cursor: pointer; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; }
@@ -144,7 +151,7 @@ body [contenteditable] { cursor: text; }
 }
 
 .vho ul{ transition: all .4s ease; -webkit-transition: all .4s ease; -moz-transition: all .4s ease; max-height: 0px; }
-.vho li{ height: 40px; line-height: 40px; padding-left: 34px; cursor: pointer; overflow: hidden; position: relative; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; }
+.vho li{ height: 40px; line-height: 40px; padding-left: 34px; cursor: pointer; overflow: hidden; position: relative; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; font-family: 'Roboto',"Helvetica Neue", "Helvetica", Helvetica, "Arimo", Arial, sans-serif !important; }
 .vho li:first-child{ }
 .vho li:hover{ color: #60A0B3; }
 .vho.vhr .vly{ color: #60A0B3; }
@@ -174,7 +181,7 @@ body [contenteditable] { cursor: text; }
 .vaa:before{ content:'\e071'; position: relative; bottom: 14px; margin-right: 16px; opacity: 0.5; }
 .vaa span{ font-size: 15px; }
 .vab{ display: inline-block; max-width: 170px; overflow: hidden; }
-.vab span{ text-overflow: ellipsis; cursor: text; padding-right: 8px; }
+.vab span{ text-overflow: ellipsis; cursor: text; padding-right: 8px; -webkit-user-select: text !important; -khtml-user-select: text !important;  -moz-user-select: text !important; }
 
 @media all and (max-height: 800px){
 	.vaa{ height: 32px; line-height: 32px; }
@@ -245,9 +252,11 @@ body [contenteditable] { cursor: text; }
 .vef{ width: 0px; height: 0px; overflow: hidden; }
 
 .vbz, .vdj{ cursor: pointer; }
-.vdj{ margin-right: 16px; position: relative; top: 4px; font-size: 18px; color: #60A0B3; }
+.vdj{ float: left; margin-right: 16px; position: relative; top: 4px; font-size: 18px; color: #60A0B3; }
 .vbz{ float: right; font-size: 13px; color: #b71a1a; display: none; }
 .ves:hover .vbz{ display: block; }
+.vfx{ display: inline-block; overflow: hidden; text-overflow: ellipsis; max-width: 160px; max-height 32px; white-space: nowrap; }
+input[type="file"]{ margin: 0 !important; }
 
 
 .vad{ opacity: 0; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; position: relative; }
@@ -256,7 +265,7 @@ body [contenteditable] { cursor: text; }
 .vma{ font-weight: 500; font-size: 15px; text-transform: uppercase; display: inline-block; text-align: center; height: 48px; line-height: 48px; cursor: pointer; color: #fff; transition: all .2s ease; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; }
 .vma:after{ content: '\e02d'; font-size: 10px; }
 .vma.vhr, .vma:hover{ color: #fff; }
-.vgi{ position: absolute; width: 240px; background: #fff; overflow: hidden; top: 48px; z-index: 101; margin-left: 32px; border-radius: 2px; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); transition: all .2s ease; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; transform: scale(0); -webkit-transform: scale(0); opacity: 0;  }
+.vgi{ position: absolute; width: 271px; background: #fff; overflow: hidden; top: 48px; z-index: 101; margin-left: 8px; border-radius: 2px; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); transition: all .2s ease; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; transform: scale(0); -webkit-transform: scale(0); opacity: 0;  }
 .vgh{ width: 50%; float: left; height: 40px; line-height: 40px; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; text-transform: capitalize; text-align: left; padding-left: 32px; cursor: pointer; }
 .vgh.vhr{ color: #60A0B3; }
 .vgh:hover{ color: #60A0B3; }
@@ -269,9 +278,10 @@ body [contenteditable] { cursor: text; }
 .vgm{ height: 0px; overflow-y: auto; overflow-x: hidden; transform: translate3d(0,200px,0); transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; }
 .vgl{ cursor: pointer; margin: 16px 32px 0px 32px; position: relative; transition: all .2s ease; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; overflow: hidden; }
 .vgl:first-child{ margin-top: 32px; }
+.vgl:last-child{ margin-bottom: 60px; }
 .vgl .vjl{ display: block; width: 100%; color: #fff; background: #333; padding: 8px 16px; font-size: 13px; }
 .vgl img{ width: 100%; }
-.vgl .vgj{ right: 0; height: 35px; width: auto; position: absolute; bottom: 5px; right: 5px; }
+.vgl .vgj{ right: 0; height: 25px; width: auto; position: absolute; bottom: 8px; right: 5px; }
 .vgl.vih{ display: block !important; height: 0 !important; margin-top: 0; }
 
 .vgq{ transform: translateX(0px); -webkit-transform: translateX(0px); -moz-transform: translateX(0px); }
@@ -282,13 +292,21 @@ body [contenteditable] { cursor: text; }
 .vcw, .vde{ width: 288px; }
 .vcl{ width: 592px; }
 
-.vin{ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;  background: #fff; display: none; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
+.vin{ letter-spacing: 0 !important; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;  background: #fff; display: none; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
+.vin span, .vin p{ letter-spacing: 0 !important; }
+.vin a{ color: #60A0B3; }
 .vin .vfa{ cursor: move; padding: 0 24px; color: #333; font-weight: 500; font-size: 18px; position: relative; height: 64px; line-height: 64px;  }
 .vin .vew{ padding: 0 24px; }
-.vin input[type="text"]{ border-radius: 0px !important; background: none !important; max-width: 100% !important; }
+.vin input[type="text"]:focus, .vin input[type="text"]:active{ outline: none !important; border-bottom: 1px solid rgba(0,0,0,.3); }
+.vin input[type="text"]{ font-family: 'Roboto','Helvetica', sans-serif; border-radius: 0px !important; background: none !important; max-width: 100% !important; height: 32px; border-bottom: 1px solid rgba(0,0,0,.3); line-height: 32px; font-size: 14px; margin-bottom: 0; font-weight: normal; text-transform: none; letter-spacing: 0; width: auto; }
+.vin select{ background: none; width: auto; font-family: 'Roboto','Helvetica', sans-serif; }
+.vin select:focus, .vin select:active{ background: none; }
 .vew p{ font-size: 15px; line-height: 24px; }
 .vew p:last-child{   }
-
+.vin input::-webkit-input-placeholder { font-weight: normal; font-size: 14px; text-transform: none; letter-spacing: 0; }
+.vin input:-moz-input-placeholder { font-weight: normal; font-size: 14px; text-transform: none; letter-spacing: 0; }
+.vin input::-moz-input-placeholder { font-weight: normal; font-size: 14px; text-transform: none; letter-spacing: 0; }
+.vin input::-ms-input-placeholder { font-weight: normal; font-size: 14px; text-transform: none; letter-spacing: 0; }
 
 .vez{ box-sizing: border-box !important; box-shadow: none !important; border-right: none; border-left: none; border-top: none; }
 .vez:focus{ outline: none;  }
@@ -298,8 +316,8 @@ body [contenteditable] { cursor: text; }
 .vej{ overflow: hidden; margin-bottom: 16px; position: relative; }
 .vej span:first-child{ display: block; height: 32px; line-height: 32px;  }
 .vej .oi{ color: #333; font-size: 15px; float: left; position: relative; top: 7px; }
-.vej input[type="text"]{ height: 32px; line-height: 32px; border-bottom: 1px solid rgba(0,0,0,0.12); padding-left: 32px; position: relative; right: 24px; color: rgba(0,0,0,0.4); margin-bottom: 0; }
-.vej input[type="text"]:focus{ color: #333; }
+.vej input[type="text"]{ width: 90%; font-size: 14px; height: 32px; line-height: 32px; border: none; border-bottom: 1px solid rgba(0,0,0,0.12); padding-left: 32px; position: relative; right: 24px; color: rgba(0,0,0,0.4); margin-bottom: 0; }
+.vej input[type="text"]:focus{ color: #333; outline: none; border-bottom: 1px solid rgba(0,0,0,0.12); }
 .vej .vja{ height: 32px; line-height: 32px; border-radius: 0px; margin-left: 8px; }
 .vej:last-child{ margin-bottom: 0px; }
 
@@ -324,12 +342,12 @@ body [contenteditable] { cursor: text; }
 
 .vcm{ padding-left: 24px; text-align: center; cursor: pointer; }
 .vcm .veb{ font-size: 13px; }
-.vcp{ max-height: 220px; max-width: 100%; }
+.vcp{ max-height: 220px; max-width: 100%; background: url('../img/checkerboard.png'); }
 .vch{ width: 0px; height: 0px; overflow: hidden; }
 .veb{ display: block; height: 24px; line-height: 24px; text-align: left; }
 
-.vdz{ width: 100%; z-index: -1; position: absolute; padding: 0 24px; background: #60A0B3; height: 367px; overflow: hidden; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; opacity: 0; transform: translateY(-250px); -webkit-transform: translateY(-250px); }
-.vdz.vhr{ opacity: 1; transform: translateY(0px); -webkit-transform: translateY(0px);  }
+.vdz{ width: 100%; z-index: -1; position: absolute; padding: 0 24px; background: #60A0B3; height: auto; overflow: hidden; visibility:hidden; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; opacity: 0; transform: translateY(-250px); -webkit-transform: translateY(-250px); }
+.vdz.vhr{ opacity: 1; transform: translateY(0px); -webkit-transform: translateY(0px); visibility:visible;  }
 .vdz .vhs{ height: 48px; line-height: 48px; color: #fff; float: right; }
 .vdx{ height: 319px; overflow: hidden; overflow-y: scroll; box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.26); }
 .vdy{ width: 100%; overflow: hidden; position: relative; margin-bottom: 11px; background: url('../img/checkerboard.png'); }
@@ -341,9 +359,42 @@ body [contenteditable] { cursor: text; }
 .vmh:nth-child(2){ margin-right: 2%; margin-left: 2%; }
 
 .vcd{ width: 656px; }
-.vce{ overflow: hidden; max-height: 500px; overflow-y: auto; }
-.vam{ width: 50px; height: 50px; margin: 0px 10px 10px 0px; font-size: 28px; text-align: center; float: left; cursor: pointer; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; line-height: 48px; }
+.vok{ margin-bottom: 32px !important; }
+.edit-icons-filter-input-mrv{ position: relative; display: inline-block; }
+.edit-icons-filter-input-mrv input[type="text"]{ padding-left: 32px; }
+.edit-icons-filter-input-mrv .oi{ position: absolute; top: 6px; }
+.vol-mrv{ position: relative; bottom: 10px; margin-left: 16px; }
+.vce{ overflow: hidden; max-height: 500px;}
+.vce.variant-scroll-shadow-mrv{ box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.26); }
+.vce.variant-filtered-mrv{ overflow-y: auto; }
+.vam{ width: 50px; height: 50px; margin: 0px 10px 10px 0px; font-size: 28px; text-align: center; float: left; cursor: pointer; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; line-height: 48px; overflow: hidden;}
 .vam:hover{ color: #333; }
+.vam .icon{ font-size: 32px; }
+.vam span.vor{ font-size: 13px; }
+.variant-filtered-mrv .vam { width: 30%; padding-left: 16px; text-align: left; }
+.variant-filtered-mrv .vam .icon{ font-size: 32px; width: 32px; }
+.variant-filtered-mrv .vam span.vor{ font-size: 13px; padding-left: 16px; }
+.voj{ position: relative; }
+.voj:after{ content: ''; position: absolute; width: 100%; height: 2px; background: #ddd; bottom: -14px; left: 0; }
+.voj li { display: inline-block; font-size: 14px; padding: 8px; cursor: pointer; position: relative;}
+.voj li.vhr span, .voj span:hover{ border-bottom: 2px solid #60A0B3; color: #60A0B3; z-index: 100;}
+.voj span{ text-transform: uppercase; padding: 0 16px 16px 16px; font-weight: 500; position: relative; }
+
+.voj { height: 32px; width:100%;}
+.variant-filtered-mrv .voj { display: none; }
+.vou { width: 100%; display: none; height: 24px; overflow:hidden; margin:32px 8px 8px 8px;}
+.vou.vhr { display: block;}
+
+.vov { overflow-y: scroll; max-height: 410px; display: none; }
+.vov.vhr, .icon-pack-info-mrv.vhr{ display: block; }
+
+.vot{ display: none; }
+.variant-filtered-mrv .vot{ display: inline-block; font-weight: bold;}
+.variant-filtered-mrv .vov{ overflow-y: none; max-height: 100000px; display: block;}
+.variant-filtered-mrv .vov.vhr,
+.variant-filtered-mrv .vou.vhr,
+.variant-filtered-mrv .vou{ display: block; }
+.vce .vow{ font-size: 16px; }
 
 .vdr{ width: 592px; }
 .vft{ width: 100%; height: 420px; overflow: auto; border: 1px solid #ccc; }
@@ -362,8 +413,14 @@ body [contenteditable] { cursor: text; }
 
 .vjr { position: fixed !important; display: none; z-index: 999999 !important; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); border-radius: 0px 0px 2px 2px; }
 .vau{ text-align: left; height: 48px; line-height: 48px; background: #60A0B3; color: #fff; font-size: 15px; font-weight: 500; padding: 0 16px; border-radius: 2px 2px 0px 0px; }
+.vnl{ text-align: left; height: 48px; line-height: 48px; background: #60A0B3; color: #fff !important; font-size: 15px; font-weight: 500; padding: 0 16px; border-radius: 2px 2px 0px 0px; }
 .vaw { text-align: left; padding: 0 32px 0 16px; height: 48px; line-height: 48px; background-color: #fff; font-size: 15px; border-top: 1px solid #ccc; min-width: 150px; color: #666; transition: all .3s ease; }
 .vav:hover { cursor: pointer; color: #60A0B3; }
+.vjr li.vmk { font-size: 14px; display: block; min-width: 200px; background-color: #fff; padding: 0 16px 0 16px; height: 48px; line-height: 48px; color: #666; border-top: 1px solid #ccc; }
+.vjr li.vmk span.oi { margin-right: 6px;}
+.vjr li.vmk span:nth-of-type(2) { margin-right: 16px;}
+.vjr li.vmk .vkt{ top: 16px;}
+ul.vnc, ul.context{ margin-bottom: 0;}
 
 .vct:before,
 .vcg:before,
@@ -420,8 +477,9 @@ body [contenteditable] { cursor: text; }
 
 .vkz{ width: 100%; cursor: default; }
 .vkz .oi{ margin-right: 16px; position: relative; top: 3px; font-size: 18px; }
+.vkz span{ font-family: 'Roboto'; }
 .vkt{ width: 32px; display: inline-block; float: right; line-height: 16px; height: 16px; position: relative; z-index: 2; top: 13px; cursor: pointer; transition: all .2s ease; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; }
-.vkt:before{ height: 8px; width: 32px; border-radius: 4px; background: #999; content: ''; position: relative; top: 5px; position: absolute; z-index: 0; }
+.vkt:before{ left: 0; height: 8px; width: 32px; border-radius: 4px; background: #999; content: ''; position: relative; top: 5px; position: absolute; z-index: 0; }
 .vmi{ width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); position: relative; z-index: 2; transition: all .2s ease; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; }
 
 .vku:before{ background: #92bdb5; }
@@ -455,6 +513,10 @@ body [contenteditable] { cursor: text; }
 .main-container{ opacity: 1 !important; }
 nav{ opacity: 1 !important; }
  
+/************* Parallax for Background-image-holders **************/
+.parallax .background-image-holder{ top: 0px; }
+.parallax > .background-image-holder, .parallax .slides li > .background-image-holder{ height: 100vh; top: 0px; transition: all 0s ease !important; }
+
 
 /************* Embedded Videos *************/
 
@@ -465,4 +527,49 @@ nav{ opacity: 1 !important; }
 .vml:hover{ opacity: 1; color: #fff; }
 .vml:active,.vml:visited{ color: #fff; text-decoration: none; }
 
+/************* Section Controls *************/
 
+.vnj{ width: 40px; position: absolute; display:block; z-index: 9999999; transition: all .2s ease; animation: fadeIn .3s ease; -webkit-animation: fadeIn .3s ease; }
+
+@keyframes fadeIn{ from{ opacity: 0; } to{ opacity: 1; } }
+@-webkit-keyframes fadeIn{ from{ opacity: 0; } to{ opacity: 1; } }
+
+.vnj.vhr{ opacity: 1; }
+.vnj .vdw, .vnj.vdw,.vnj li .vdw, .vnj span .vdw{ outline:none !important; }
+
+.vnj .vmk{ padding: 0 32px 0 16px; text-align: left; }
+.vnj .vnc{ position: absolute; right: 0; color: #666; font-size: 14px; background: #fff; z-index: 1000 !important; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); border-radius: 2px; min-width: 230px; }
+.vnj > ul{ float: right; overflow: hidden; }
+
+.vni, .vnj .vno{ text-align: center !important; margin: 0 4px; font-size: 18px; line-height: 32px; padding-top: 6px; background: rgba(35,35,35,0.85); color: #fff; text-align: center; border-radius: 50%; height: 40px; width: 40px; float: right; display: block; transition: all .3s ease; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; opacity: 0.6; cursor: pointer; }
+.vni{ margin-right: 0; padding-top: 5px; }
+.vni:hover, .vnj .vno:hover{ opacity: 1; }
+.vni.vhr{ opacity: 1; }
+.vni ul{ transition: all .3s ease; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; opacity: 0; transform: scale(0); -webkit-transform: scale(0); visibility: hidden; margin: 0 !important; padding:0 !important; }
+.vni.vhr ul{ opacity: 1; transform: scale(1); -webkit-transform: scale(1); visibility: visible;; }
+.vni ul li{ -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.vnm.oi{ font-family: 'Icons' !important; }
+
+.vnj .vnp{ display: none; }
+
+.vnk .vnl{ display: block; }
+.vnk{ margin: 0 !important; }
+.vnk ul{ color: #666; font-size: 14px; }
+.vnk li{ margin: 0 !important; }
+.vnk ul li span, .vnk ul li i{ color: #666 !important; }
+
+.elemen-context-options-mrv li{ margin: 0 !important; }
+
+.main-container{ position: relative; }
+
+/************* General Option Buttons (round icon button) *************/
+.vnv.vdw, .vnw.vdw, .vnu.vdw{ outline: none !important;  }
+.vnv{ cursor: pointer !important; display: inline-block; text-align: center !important; margin: 0 4px !important; font-size: 18px; line-height: 32px; padding-top: 6px; background: rgba(35,35,35,0.85); color: #fff; text-align: center; border-radius: 50%; height: 40px; width: 40px; transition: all .3s ease; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; opacity: 0.6; cursor: pointer; pointer-events: all; }
+.vnv:hover{ opacity: 1; }
+.vnu{ position: relative; display: inline-block; max-width: 100% }
+.vnw{ height: 50px; width: 100%; top: 0px; margin: 0px !important; text-align: center; display: block !important; position: absolute; padding: 10px; animation: fadeIn .3s ease; -webkit-animation: fadeIn .3s ease; z-index: 1001;}
+.vny{ top: -50px; padding: 0px; margin: 0px; }
+
+/************* Google Maps API *************/
+.map-canvas{ background: url("../img/requires-maps-api-key.png") repeat; }
+ 

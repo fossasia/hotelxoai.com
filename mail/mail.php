@@ -1,63 +1,37 @@
 <?php
- 
-if(isset($_POST['email'])) {
-	// Require the Swift Mailer library
-	require_once 'lib/swift_required.php';
 
-	// Enter your SMTP settings here...
-	// You can look up your mail server and also see if it supports TLS by going to:
-	// http://mxtoolbox.com/diagnostic.aspx 
-	// and entering smtp:yourdomain.com 
-	// You'll be given a report stating the server name to use and whether your server supports TLS.
-	
-	
-	// Change smtp.example.org to your own server address below
-	// Enter your email account username and password below also...
-	
-	// If your server supports a security layer (Gmail enforces use of 'tls' and port 587) change port accordingly (587 or 25 usually) and use 'tls' or 'ssl' as a third argument like so:
-	// FOR GMAIL: 		$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls')
-	// GENERIC TLS: 	$transport = Swift_SmtpTransport::newInstance('mail.mediumra.re', 25, 'tls')
-	
-	// If you choose not to use SSL or TLS then the following could work for you:
-	// $transport = Swift_SmtpTransport::newInstance('mail.mediumra.re', 25)
-	
-	// or if you prefer/need to fall back to use PHP's inbuilt mail() function:
-	// $transport = Swift_MailTransport::newInstance();
-	
-	$transport = Swift_SmtpTransport::newInstance('mail.yourdomain.com', 25, 'tls' )
-	  ->setUsername('email@domain.com')     
-	  ->setPassword('p@55w0rd')
-	  ;
+ /*----------------------------------------------------------------------------*\
+|*  Email settings for sending all emails from your website forms.              *|
+ \*============================================================================*/
 
-	
-	$mailer = Swift_Mailer::newInstance($transport);
-	
-	
-	// Creating the message text using fields sent through POST
-	
-	foreach ($_POST as $key => $value)
-		$messageText .= ucfirst($key).": ".$value."\n\n";
-	
-	
-	
-	
-	// You can change "A message from Pangaea Template Form" to your own subject if you want.
-	$message = Swift_Message::newInstance('A message from Pangaea Template Form')
-	  ->setFrom(array($_POST['email'] => $_POST['name']))
-	  ->setTo(array('email@yourdomain.com' => 'John Doe'))->setBody($messageText);
-//                           ^                    ^
-//       Your email address_/          Your name_/
+// Choose here whether to use php mail() function or your SMTP server (recommended) to send the email.
+// Use 'smtp' for better reliability, or use 'phpmail' for quick + easy setup with lower reliability.
+$emailMethod                = 'smtp'; // REQUIRED value. Options: 'smtp' , 'phpmail'
 
-	  
+// Outgoing Server Settings - replace values on the right of the = sign with your own.
+// These 3 settings are only required if you choose 'smtp' for emailMethod above.
+$outgoingServerAddress      = 'mail.yourdomain.com'; // Consult your hosting provider.
+$outgoingServerPort         = '25';                  // Options: '587' , '25' - Consult your hosting provider.
+$outgoingServerSecurity     = 'tls';                 // Options: 'ssl' , 'tls' , null - Consult your hosting provider.
 
-	// Send the message or catch an error if it occurs.
-	try{
-		echo($mailer->send($message));
-	}
-	catch(Exception $e){
-		echo($e->getMessage());
-	}
-	exit;
-}
- 
+// Sending Account Settings - replace these details with an email account held on the SMTP server entered above.
+// These 2 settings are only required if you choose 'smtp' for emailMethod above.
+$sendingAccountUsername     = 'email@domain.com';
+$sendingAccountPassword     = 'p@55w0rd';
+
+// Recipient (To:) Details  - Change this to the email details of who will receive all the emails from the website.
+$recipientEmail             = 'email@yourdomain.com'; // REQUIRED value.
+$recipientName              = 'John Doe';             // REQUIRED value.
+
+// Email details            - Change these to suit your website needs
+$emailSubject               = 'A message from Your Website'; // REQUIRED value. Subject of the email that the recipient will see
+$websiteName                = 'Your Website';                // REQUIRED value. This is used when a name or email is not collected from the website form
+
+$timeZone					= 'Australia/Melbourne';         // OPTIONAL, but some servers require this to be set. 
+                                                             // See a list of all supported timezones at: http://php.net/manual/en/timezones.php
+ /*----------------------------------------------------------------------------*\
+|*  You do not need to edit anything below this line, the rest is automatic.    *|
+ \*============================================================================*/
+include('lib/mail_sender.php');
+
 ?>

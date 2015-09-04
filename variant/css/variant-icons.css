@@ -1,8 +1,12 @@
-
 @font-face {
   font-family: 'Icons';
   src: url('../fonts/variant-icons.eot');
-  src: url('../fonts/variant-icons.eot?#iconic-sm') format('embedded-opentype'), url('../fonts/variant-icons.woff') format('woff'), url('../fonts/variant-icons.ttf') format('truetype'), url('../fonts/variant-icons.otf') format('opentype'), url('../fonts/variant-icons.svg#iconic-sm') format('svg');
+  src: url('../fonts/variant-icons.otf') format('opentype'),
+  url('../fonts/variant-icons.eot?#iconic-sm') format('embedded-opentype'),
+  url('../fonts/variant-icons.woff') format('woff'), 
+  url('../fonts/variant-icons.ttf') format('truetype'), 
+   
+  url('../fonts/variant-icons.svg#iconic-sm') format('svg');
   font-weight: normal;
   font-style: normal;
 }
